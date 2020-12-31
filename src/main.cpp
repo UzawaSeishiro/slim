@@ -80,6 +80,7 @@ static void usage(void) {
       "arithmetic, nlmem, etc\n"
       "  --nd                 Change the execution mode from RunTime(RT) to "
       "ModelChecker(MC)\n"
+      "  --with-scc           Calcurate SCC graph for all statespace\n"
       "  --translate          Change the execution mode to Output translated C "
       "from LMNtal\n"
       "  -t                   (RT) Show execution path\n"
