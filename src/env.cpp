@@ -143,6 +143,7 @@ LmnEnv::LmnEnv() {
   this->mc_dump_format = CUI;
   this->sp_dump_format = SP_NONE;
   this->nd = FALSE;
+  this->with_scc = FALSE;
   this->ltl = FALSE;
   this->ltl_all = FALSE;
   this->enable_por_old = FALSE;

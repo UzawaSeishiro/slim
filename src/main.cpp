@@ -186,6 +186,7 @@ static void parse_options(int *optid, int argc, char *argv[]) {
                                   {"nd", 0, 0, 1402},
                                   {"opt-min", 0, 0, 1403},
                                   {"opt-max", 0, 0, 1404},
+                                  {"--with-scc", 0, 0, 1406}
                                   {"nc", 1, 0, 1410},
                                   {"psym", 1, 0, 1411},
                                   {"ltl-f", 1, 0, 1412},
@@ -359,7 +360,8 @@ static void parse_options(int *optid, int argc, char *argv[]) {
       break;
     case 1406:
       lmn_env.nd = TRUE;
-      lmn_env.calcurate_scc = TRUE;
+      lmn_env.with_scc = TRUE;
+      break;
     case 1410:
       lmn_env.automata_file = optarg;
       break;
@@ -752,6 +754,10 @@ static inline void slim_exec(const std::vector<LmnRuleSetRef> &start_rulesets) {
 int main(int argc, char *argv[]) {
   int optid;
   slim_init(&optid, argc, argv);
+  if (lmn_env.with_scc) {
+    printf("Nice! %d\n", optid);
+    return 0;
+  }
 
   if (lmn_env.run_test) {
 #ifdef USE_CUNIT
