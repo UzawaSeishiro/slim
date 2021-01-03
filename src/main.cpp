@@ -755,7 +755,7 @@ int main(int argc, char *argv[]) {
   int optid;
   slim_init(&optid, argc, argv);
   if (lmn_env.with_scc) {
-    printf("Nice! %d\n", optid);
+    printf("Nice! Go next! optid:%d\n", optid);
     return 0;
   }
 
