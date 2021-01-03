@@ -357,6 +357,9 @@ static void parse_options(int *optid, int argc, char *argv[]) {
       lmn_env.opt_mode = OPT_MAXIMIZE;
       lmn_env.show_transition = TRUE;
       break;
+    case 1406:
+      lmn_env.nd = TRUE;
+      lmn_env.calcurate_scc = TRUE;
     case 1410:
       lmn_env.automata_file = optarg;
       break;
